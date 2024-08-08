@@ -3,20 +3,18 @@
 </nav>
 
 <!--? Student One -->
-<app-students-details [student]="students[0]">
+<app-students-details [students]="student1">
   <h5 #color>Student Name: {{students[0].Name}}</h5>
   <h5>Student Address: {{students[0].Address}}</h5>
 </app-students-details>
 
-<!--? Student Two -->
-<app-students-details [student]="students[1]">
-  <h5>Student Name: {{students[1].Name}}</h5>
+<app-students-details [students]="[students[1]]">
+  <h5  #color>Student Name: {{students[1].Name}}</h5>
   <h5>Student Address: {{students[1].Address}}</h5>
 </app-students-details>
 
-<!--? Student Three -->
-<app-students-details [student]="students[2]">
-  <h5>Student Name: {{students[2].Name}}</h5>
+<app-students-details [students]="[students[2]]">
+  <h5 #color>Student Name: {{students[2].Name}}</h5>
   <h5>Student Address: {{students[2].Address}}</h5>
 </app-students-details>
 

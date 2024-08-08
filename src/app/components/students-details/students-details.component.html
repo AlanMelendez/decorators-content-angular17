@@ -1,1 +1,25 @@
-<p>students-details works!</p>
+<div *ngFor="let student of students"  class ="alert alert-secondary" role="alert" style="padding: 30px;margin: 40px;">
+  <h3>Student Detail</h3>
+  <h5>Student ID: {{student.id}}</h5>
+  <h5>Student Name: {{student.Name}}</h5>
+
+  <ng-content></ng-content>
+
+  <h5>Student Address: {{student.Address}}</h5>
+  <h5>Student Age: {{student.Age}}</h5>
+
+</div>
+
+<!-- @for (student of this.students; track $index) {
+  <div class ="alert alert-secondary" role="alert" style="padding: 30px;margin: 40px;">
+  <h3>Student Detail</h3>
+  <h5>Student ID: {{student.id}}</h5>
+  <h5>Student Name: {{student.Name}}</h5>
+
+  <ng-content></ng-content>
+
+  <h5>Student Address: {{student.Address}}</h5>
+  <h5>Student Age: {{student.Age}}</h5>
+
+</div>
+} -->

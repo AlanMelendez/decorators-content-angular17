@@ -17,10 +17,14 @@ export class AppComponent {
   title = 'ContentChildAndContentChildrenExamples';
 
   students: Student[] = [
-    {id: 1, Name: 'John', Address: 'USA', Age: 25},
-    {id: 2, Name: 'Smith', Address: 'UK', Age: 30},
-    {id: 3, Name: 'Karan', Address: 'India', Age: 22},
+    {'id': 1, 'Name': 'John', 'Address': 'USA', 'Age': 25},
+    {'id': 2, 'Name': 'Smith', 'Address': 'UK', 'Age': 30},
+    {'id': 3, 'Name': 'Karan', 'Address': 'India', 'Age': 22},
   ];
+
+  student1:Student[] = [
+    {'id' : 1, 'Name': 'Piysuh Deshmukh', 'Address': 'Pune', 'Age': 26}
+  ]
 
 
 }
