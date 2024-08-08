@@ -2,15 +2,22 @@
   <span class="navbar-brand mb-0 h1">Angular Examples</span>
 </nav>
 
-<!--? Student One -->
-<app-students-details [students]="student1">
-  <h5 #color>Student Name: {{students[0].Name}}</h5>
-  <h5>Student Address: {{students[0].Address}}</h5>
-</app-students-details>
 
+
+<!--! Usando ContentChildren -->
+<app-students [students]="student1">
+  <h5 #color>Student Name: {{students[0].Name}}</h5>
+  <h5 #color>Student Address: {{students[0].Address}}</h5>
+</app-students>
+
+<!--! Usando ContentChild -->
+<!--
+  Dentro del [students]="[students[1]]" , pasamos le valor dentro de otros corchetes para que sea un array.
+  Ya que si solo pasa el valor de [students]="students[1]" , el valor que se pasa no es un array y el ngFor no funcionara.
+-->
 <app-students-details [students]="[students[1]]">
-  <h5  #color>Student Name: {{students[1].Name}}</h5>
-  <h5>Student Address: {{students[1].Address}}</h5>
+  <h5 #color>Student Name: {{students[1].Name}}</h5>
+  <h5 #color >Student Address: {{students[1].Address}}</h5>
 </app-students-details>
 
 <app-students-details [students]="[students[2]]">

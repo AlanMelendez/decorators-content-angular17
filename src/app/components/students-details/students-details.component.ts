@@ -32,6 +32,13 @@ export class StudentsDetailsComponent {
 
       //Set the color of the content child
       if (this.contentColor) {
+        /*
+          Cambiamos el color del contenido referenciado por el ContentChild (En este caso).
+          Si tuvieramos dos elementos con la misma referencia, ambos cambiarían de color pero es necesario
+          usar ContentChildren para obtener una lista de todos los elementos referenciados por la directiva.
+
+          El content Child, solo causara efecto en el primer elemento, cualquier otro sera omitido.
+        */
         this.contentColor.nativeElement.setAttribute('style', 'color: red');
       }
   }
